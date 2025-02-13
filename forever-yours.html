@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Yours, Sora ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@900&display=swap');
+        body {
+            background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+            color: #333;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            animation: fadeIn 2s ease-in-out;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100vh;
+            position: relative;
+        }
+        .container {
+            padding: 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+        h1 {
+            font-size: 3em;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ff4d4d;
+            animation: slideIn 1s ease-in-out;
+        }
+        .marriage-box {
+            background: #ff5c8a;
+            color: #ffd1dc;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 92, 138, 0.8);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .marriage-text {
+            font-size: 1.8em;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+        }
+        .things-list {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.8);
+            animation: fadeInUp 1s ease-in-out;
+            text-align: left;
+        }
+        .things-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .things-list li {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        @keyframes floatAnimation {
+            0% { transform: translateY(100vh); opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .floating-heart, .floating-balloon {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            opacity: 0.8;
+            animation: floatAnimation 8s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Forever Yours, Sora ❤️</h1>
+        
+        <div class="marriage-box">
+            <p class="marriage-text">That's it for today... The fact that you reached here means we are married now! 😈💕<br>
+            And you <strong>can't escape</strong> anymore! I love you soooo much, babe. We'll be together forever! ❤️<br><br>
+            I'll always be playing Standoff with you forever... and maybe play somewhere else too. 😏🔥</p>
+        </div>
+        
+        <div class="things-list">
+            <h2>100 Things I Love About You 💕</h2>
+            <ul id="things-list"></ul>
+        </div>
+    </div>
+    <script>
+        function createFloatingElement(type) {
+            const element = document.createElement("div");
+            element.classList.add(type === "heart" ? "floating-heart" : "floating-balloon");
+            element.style.left = Math.random() * 100 + "vw";
+            element.style.top = Math.random() * 50 + "vh";
+            element.style.animationDuration = Math.random() * 3 + 4 + "s";
+            element.innerHTML = type === "heart" ? "❤️" : "🎈";
+            document.body.appendChild(element);
+            setTimeout(() => document.body.removeChild(element), 8000);
+        }
+        setInterval(() => createFloatingElement(Math.random() > 0.5 ? "heart" : "balloon"), 500);
+        
+        const thingsILove = [
+            "Your beautiful eyes 👀", "Your cute voice 🎤", "Your laugh that makes my heart melt 😍",
+            "The way you say my name 😘", "How you always make me smile 😊", "The way you tease me playfully 😉",
+            "Your kindness and big heart ❤️", "Your cute reactions when I surprise you 🎁", 
+            "The way you hold me close (even virtually) 🤗", "Your love for Standoff 2 and gaming with me 🎮",
+            "Your warm hugs 🤍", "The way you make everything feel special ✨", "How you always support me 💪",
+            "The way you giggle when I say something dumb 😂", "Your romantic side when you least expect it 🌹",
+            "Your morning texts 🌞", "The way you comfort me when I'm down 🤗", "Your patience 🕰️",
+            "Your honesty and trustworthiness 🤞", "The way you call me 'Yuvi' 🥰", "How you're the best thing ever ❤️"
+        ];
+        for (let i = 0; i < 100; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = thingsILove[i % thingsILove.length] + ` (${i + 1})`;
+            document.getElementById("things-list").appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
