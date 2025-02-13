@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Yours, Sora ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@900&display=swap');
+        body {
+            background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+            color: #333;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            animation: fadeIn 2s ease-in-out;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        .container {
+            padding: 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+        h1 {
+            font-size: 3em;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ff4d4d;
+            animation: slideIn 1s ease-in-out;
+        }
+        .question-box {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.8);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .question {
+            font-size: 2em;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            color: black;
+            margin-bottom: 10px;
+        }
+        .checkbox-label {
+            font-size: 1.5em;
+            display: block;
+            margin: 10px 0;
+        }
+        .checkbox-label input {
+            transform: scale(1.5);
+            margin-right: 10px;
+        }
+        .note {
+            font-size: 1.2em;
+            color: #333;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        .mcq-box {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.8);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .mcq {
+            font-size: 1.8em;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            color: black;
+            margin-bottom: 10px;
+        }
+        select {
+            font-size: 1.2em;
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+        }
+        button {
+            background: linear-gradient(to right, #ff4d4d, #ff9999);
+            color: white;
+            padding: 12px 25px;
+            font-size: 22px;
+            font-family: 'Bebas Neue', sans-serif;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: pulse 1.5s infinite;
+            display: block;
+            margin: 30px auto;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Forever Yours, Sora ❤️</h1>
+        
+        <div class="question-box">
+            <p class="question">1. Will you be my Valentine?</p>
+            <label class="checkbox-label"><input type="checkbox"> Yes</label>
+            <label class="checkbox-label"><input type="checkbox"> Yes</label>
+        </div>
+        
+        <div class="question-box">
+            <p class="question">2. Will you marry me?</p>
+            <label class="checkbox-label"><input type="checkbox"> Yes</label>
+            <label class="checkbox-label"><input type="checkbox"> Yes</label>
+        </div>
+        
+        <div class="question-box">
+            <p class="question">3. Will you stay with me forever?</p>
+            <label class="checkbox-label"><input type="checkbox"> Yes</label>
+            <label class="checkbox-label"><input type="checkbox"> Yes</label>
+        </div>
+        
+        <p class="note">Sorry, you can't say no, my darling 😈💕</p>
+        
+        <div class="mcq-box">
+            <p class="mcq">4. How many children do you want?</p>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>6 (oh damn 😂)</option>
+            </select>
+        </div>
+        
+        <div class="mcq-box">
+            <p class="mcq">5. How many times should I... you know... per day? 😏</p>
+            <select>
+                <option>2</option>
+                <option>3</option>
+                <option>5</option>
+                <option>Endless 😈🔥</option>
+            </select>
+        </div>
+        
+        <button onclick="nextPage('final-surprise.html')">Seal the deal! 💍💖</button>
+    </div>
+    
+    <script>
+        function nextPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
