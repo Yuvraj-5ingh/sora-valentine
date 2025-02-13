@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Sora ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@600&display=swap');
+        body {
+            background: url('paper-texture.jpg');
+            color: #333;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container {
+            padding: 20px;
+        }
+        header {
+            font-size: 3em;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff4d4d, #ff9999);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            animation: slideIn 1s ease-in-out;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeInContent 2s ease-in-out forwards;
+            color: #222;
+        }
+        button {
+            background: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: 'Bebas Neue', sans-serif;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #ff4d4d;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInContent {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            For My Love, Sora ❤️
+        </header>
+        
+        <section class="section">
+            <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5em;">My Love Letter to You</h2>
+            <p>Hey Sora,</p>
+            <p>Every second with you is a treasure. Even though miles separate us, my heart is always close to yours. You are my joy, my happiness, my everything. ❤️</p>
+            <p class="cursive">I love you forever, my Sora. 💖</p>
+            <p>Forever and always,</p>
+            <p><strong>Yuvi</strong></p>
+            <button onclick="nextPage('surprise.html')">Next →</button>
+        </section>
+    </div>
+    
+    <script>
+        function nextPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
